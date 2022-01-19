@@ -11,7 +11,7 @@ public class SpawnManager : MonoBehaviour
     Vector3 positionLeft;
 
     private void Start() {
-        InvokeRepeating("addWalls", 0.0f, 2.0f);
+        InvokeRepeating("addWalls", 0.0f, 1.0f);
     }
     void Update(){
         
