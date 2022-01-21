@@ -14,7 +14,6 @@ public class CameraController : MonoBehaviour
     private float acceleration = 0.0000001f;
     void Update()
     {
-        
         transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
         if (pc.ended){
             Debug.Log("the game is over from camera");
