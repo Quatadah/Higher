@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using pc = PlayerController;
 
 public class DragNshoot : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class DragNshoot : MonoBehaviour
             transform.position = stickPosition;
         }
 
-        if (canDrag){
+        if (canDrag && !pc.ended){
             if (Input.GetMouseButtonDown(0)){
                 startPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 if (Time.timeScale == 1.0f){

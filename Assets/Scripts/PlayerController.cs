@@ -21,17 +21,16 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {    
-        if (GetComponent<Renderer>().isVisible) {
-            Debug.Log("visible");
+        if (!(Camera.main.gameObject.transform.position.y > transform.position.y + 10)) {
             gameOver.gameObject.SetActive(false);
             restart.gameObject.SetActive(false);
             back.gameObject.SetActive(false);
-            ended = true;
+            ended = false;
         }else{
-            Debug.Log("Invisible");
             gameOver.gameObject.SetActive(true);
             restart.gameObject.SetActive(true);
             back.gameObject.SetActive(true);
+            ended = true;
         }
     }
 }
