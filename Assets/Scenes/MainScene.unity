@@ -477,6 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: {fileID: 1947457630}
   scoreCounter: 0
+  yourScore: {fileID: 1289881108}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
