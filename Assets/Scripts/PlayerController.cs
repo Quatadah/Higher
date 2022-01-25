@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {    
-        if (!(Camera.main.gameObject.transform.position.y > transform.position.y + 10)) {
+        if (!(Camera.main.gameObject.transform.position.y > transform.position.y + 20)) {
             gameOver.gameObject.SetActive(false);
             restart.gameObject.SetActive(false);
             back.gameObject.SetActive(false);

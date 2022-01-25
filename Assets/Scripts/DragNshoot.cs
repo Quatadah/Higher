@@ -35,16 +35,16 @@ public class DragNshoot : MonoBehaviour
             if (Input.GetMouseButtonDown(0)){
                 startPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 if (Time.timeScale == 1.0f){
-                    Time.timeScale = 0.5f ;
+                    Time.timeScale = 0.2f;
+                    Time.fixedDeltaTime = Time.timeScale * .02f;
                 }
                 rb.velocity /= 2;
-            }
-            
+            }         
 
             if (Input.GetMouseButton(0)){
                 endPos = cam.ScreenToWorldPoint(Input.mousePosition);
                 Vector2 _velocity = (startPos - endPos) * power;
-                Vector2[] trajectory = Plot(rb, (Vector2)transform.position, _velocity, 100);
+                Vector2[] trajectory = Plot(rb, (Vector2)transform.position, _velocity, 300);
                 lr.positionCount = trajectory.Length;
                 Vector3[] positions = new Vector3[trajectory.Length];
 

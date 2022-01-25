@@ -9,9 +9,9 @@ public class CameraController : MonoBehaviour
     public TextMeshPro score;
     public double scoreCounter = 0f;
     public TextMeshProUGUI yourScore;
-    private float maxspeed = 0.025f;
-    private float speed = 0.008f;
-    private float acceleration = 0.0000001f;
+    private float maxspeed = 0.05f;
+    private float speed = 0.009f;
+    private float acceleration = 0.000001f;
     void Update()
     {
         transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
